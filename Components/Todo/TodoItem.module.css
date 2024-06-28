@@ -1,0 +1,83 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.checkbox {
+  margin-right: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox:checked {
+  background-color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.5rem;
+  width: 0.25rem;
+  height: 0.75rem;
+  border: solid white;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priority {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.priority.low {
+  background-color: green;
+}
+
+.priority.medium {
+  background-color: orange;
+}
+
+.priority.high {
+  background-color: red;
+}
+
+.header h3 {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.dueDate {
+  margin: 0 0 0 1rem;
+}
+
+.description {
+  margin-top: 0.5rem;
+}
